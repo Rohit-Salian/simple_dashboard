@@ -60,20 +60,27 @@ const StyledSelect: React.FC<StyledSelectProps> = ({
   }, [data, onChange]);
 
   return (
-    <FormControl sx={sx}>
-      <InputLabel id={label}>Select User</InputLabel>
+    <FormControl sx={sx} fullWidth>
+      <InputLabel id={`Select User`}>Select User</InputLabel>
       <Select
-        label={label}
+        // labelId={`${label}-label`}
+        label={`Select User`}
         id={label}
         onChange={(e) => onChange(e.target.value as string)}
         value={value || randomValue}
         data-cy={label}
       >
-        {data?.map((person) => (
-          <MenuItem key={person.mail} value={person.mail}>
-            <ListItemText primary={person.naav} />
+        {data.length === 0 ? (
+          <MenuItem value="" disabled>
+            <ListItemText primary="Select Global User" />
           </MenuItem>
-        ))}
+        ) : (
+          data.map((person) => (
+            <MenuItem key={person.mail} value={person.mail}>
+              <ListItemText primary={person.naav} />
+            </MenuItem>
+          ))
+        )}
       </Select>
     </FormControl>
   );

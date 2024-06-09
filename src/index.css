@@ -36,7 +36,7 @@ body {
 }
 
 .MuiFormLabel-root {
-  line-height: 0.8 !important;
+  line-height: 1 !important;
 }
 
 h1 {

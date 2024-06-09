@@ -88,7 +88,7 @@ export const Filter = ({ authorDataAll, setFilteredUserData }) => {
       <Grid container spacing={1}>
         <Grid item xs={2}>
           <FormControl fullWidth>
-            <InputLabel id="global-user-filter">Select User</InputLabel>
+            <InputLabel id="global-user-filtser">Select User</InputLabel>
             <Select
               labelId="global-user-filter"
               id="global-user-filter"

@@ -58,7 +58,7 @@ const Dashboard: React.FC = () => {
         />
       </Grid>
 
-      <Grid item xs={6}>
+      <Grid item xs={6.3}>
         <Paper elevation={3} sx={styles.paperStyle}>
           <TotalActivityBarChart
             data={filteredUserData}
@@ -66,7 +66,7 @@ const Dashboard: React.FC = () => {
           />
         </Paper>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={5.7}>
         <Paper elevation={3} sx={styles.paperStyle}>
           <DayWiseActivityChart data={filteredUserData} />
         </Paper>
