@@ -1,4 +1,4 @@
-import { data } from "../../../data.json";
+import { data } from "../../../public/data.json";
 import { Grid, Paper } from "@mui/material";
 import {
   ActivityMeta,
@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
     const fetchData = async () => {
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      const response = await fetch("../../../data.json");
+      const response = await fetch("../../../public/data.json");
       const result = await response.json();
       setData1(result.data);
       setLoading(false);
@@ -47,7 +47,7 @@ const Dashboard: React.FC = () => {
 
     fetchData();
   }, []);
-
+  console.log(loading);
   return (
     <Grid container spacing={2} px={4} my={2}>
       {loading && <CircularProgressBar />}
