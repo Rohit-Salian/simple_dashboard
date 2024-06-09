@@ -66,12 +66,12 @@ const StyledSelect: React.FC<StyledSelectProps> = ({
     <FormControl sx={sx} fullWidth>
       <InputLabel id={label}>Select User</InputLabel>
       <Select
-        sx={styles.muiSelect}
         label={label}
         id={label}
         onChange={(e) => onChange(e.target.value as string)}
         value={value || randomValue}
         data-cy={dataCy}
+        placeholder={label}
       >
         {data.length === 0 ? (
           <MenuItem value="" disabled>
