@@ -8,7 +8,6 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
-  TextField,
 } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { getAuthorNameList, getMinMaxDates } from "../common/helper";
@@ -134,7 +133,6 @@ export const Filter = ({ authorDataAll, setFilteredUserData }) => {
             defaultValue={minDate}
             value={startDate}
             onChange={(date) => setStartDate(date)}
-            // renderInput={(params) => <TextField {...params} fullWidth />}
           />
         </Grid>
         <Grid item xs={2}>
@@ -145,7 +143,6 @@ export const Filter = ({ authorDataAll, setFilteredUserData }) => {
             defaultValue={maxDate}
             value={endDate}
             onChange={(date) => setEndDate(date)}
-            // renderInput={(params) => <TextField {...params} fullWidth />}
           />
         </Grid>
         <Grid item xs={2} sx={{ display: "flex", alignItems: "center" }}>
