@@ -1285,7 +1285,7 @@
           "activeDays": {
             "days": 6,
             "isBurnOut": false,
-            "insight": [""]
+            "insight": ["Not bad!", "Need to work on time Management."]
           }
         },
         {
@@ -1913,7 +1913,7 @@
           "activeDays": {
             "days": 5,
             "isBurnOut": false,
-            "insight": [""]
+            "insight": ["Despacito progress!", "Work on time management."]
           }
         },
         {
