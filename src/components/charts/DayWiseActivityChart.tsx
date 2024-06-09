@@ -93,7 +93,8 @@ export const DayWiseActivityChart: React.FC<DayWiseActivityChartProps> = ({
         data={data}
         value={selectedPerson}
         onChange={setSelectedPerson}
-        label="daywise-user-filter"
+        label="Select User"
+        dataCy="daywise-user-filter"
         sx={{ width: 200 }}
       />
       {chartData.labels &&

@@ -49,7 +49,8 @@ const InsightChart: React.FC<InsightChartProps> = ({ data }) => {
         data={data}
         value={selectedPerson}
         onChange={setSelectedPerson}
-        label={`dev-insight-filter`}
+        label="Select User"
+        dataCy="insight-user-filter"
         sx={{ width: 200 }}
       />
       <Card>

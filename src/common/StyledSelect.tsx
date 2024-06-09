@@ -39,6 +39,7 @@ type StyledSelectProps = {
   onChange: (value: string) => void;
   label?: string;
   sx?: SxProps<Theme>;
+  dataCy?: string;
 };
 
 const StyledSelect: React.FC<StyledSelectProps> = ({
@@ -47,6 +48,7 @@ const StyledSelect: React.FC<StyledSelectProps> = ({
   onChange,
   label = "no label specified",
   sx = { width: 300 },
+  dataCy,
 }) => {
   const [randomValue, setRandomValue] = useState<string>("");
 
@@ -61,14 +63,13 @@ const StyledSelect: React.FC<StyledSelectProps> = ({
 
   return (
     <FormControl sx={sx} fullWidth>
-      <InputLabel id={`Select User`}>Select User</InputLabel>
+      <InputLabel id={label}>Select User</InputLabel>
       <Select
-        // labelId={`${label}-label`}
-        label={`Select User`}
+        label={label}
         id={label}
         onChange={(e) => onChange(e.target.value as string)}
         value={value || randomValue}
-        data-cy={label}
+        data-cy={dataCy}
       >
         {data.length === 0 ? (
           <MenuItem value="" disabled>
