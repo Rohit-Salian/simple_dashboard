@@ -1,0 +1,21 @@
+# Use an official Node.js image as the base
+FROM node:18-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Check the Node.js version
+RUN node -v
+
+# Install dependencies (npm install will run again if the package.json changes)
+COPY package*.json ./
+RUN npm install
+
+# Copy the rest of the application (except files ignored in .dockerignore)
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Command to run the application in development mode
+CMD ["npm", "run", "dev"]
